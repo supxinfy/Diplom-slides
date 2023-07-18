@@ -8,22 +8,14 @@ The idea is just to make the entire presentation through [manim-slides](https://
 Well, due to an insanely tiny amount of time, I've made it in the simplest way possible.
 
 ## In case you'd like to run
-
-To run, make sure that you
-<ul>
-    <li>have installed manim (if not just enter `pip install manim`)</li>
-    <li>have installed manim-slides (again, if you haven't, make `pip install manim-slides`),</li>
-</ul>
-Afterwards, just find a suitable directory for cloning, and then
-<ol>
-    <li>`git clone https://github.com/supxinfy/Diplom-slides`</li>
-    <li>`cd Diplom-slides`</li>
-    <li>`manim-slides main.py Slides`</li>
-</ol>
+- `pip3 install manim`
+- `pip3 install manim-slides`
+- `git clone https://github.com/supxinfy/Diplom-slides`
+- `manim-slides main.py Slides`
 
 ## Content
 Topic of my talk is "Bernstein polynomials and MacWilliams transform". Presentation made in Russian.
-In case you don't know Russian, my supervisor and I have an article with the same content in English here: https://pca-pdmi.ru/2023/files/17/Gogin-Shubin-2023.pdf.
+In case you don't know Russian, my supervisor and I have an article with the same content in English [here](https://pca-pdmi.ru/2023/files/17/Gogin-Shubin-2023.pdf).
 
 If you don't want to read it, there is a short explanation. 
 There're well-known [Bernstein polynomials](https://en.wikipedia.org/wiki/Bernstein_polynomial), which is the first example of constructive proof of [the fact](https://en.wikipedia.org/wiki/Stone–Weierstrass_theorem) that any continuous function on the compact [a, b] can be approximated by a polynomial with an arbitrary small error. Thus, it's quite useful to find new ways to compute them.
