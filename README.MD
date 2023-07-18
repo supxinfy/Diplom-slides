@@ -11,7 +11,7 @@ Well, due to an insanely tiny amount of time, I've made it in the simplest way p
 ### Content
 <hr>
 Topic of my talk is "Bernstein polynomials and MacWilliams transform". Presentation made in Russian.
-In case you don't know Russian, my supervisor and I have an article with the same content in English [here](https://pca-pdmi.ru/2023/files/17/Gogin-Shubin-2023.pdf).
+In case you don't know Russian, my supervisor and I have an article with the same content in English here: https://pca-pdmi.ru/2023/files/17/Gogin-Shubin-2023.pdf.
 
 If you don't want to read it, there is a short explanation. 
 There're well-known [Bernstein polynomials](https://en.wikipedia.org/wiki/Bernstein_polynomial), which is the first example of constructive proof of [the fact](https://en.wikipedia.org/wiki/Stone–Weierstrass_theorem) that any continuous function on the compact [a, b] can be approximated by a polynomial with an arbitrary small error. Thus, it's quite useful to find new ways to compute them.
