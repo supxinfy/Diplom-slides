@@ -8,7 +8,7 @@ The idea is just to make the entire presentation through [manim-slides](https://
 Well, due to an insanely tiny amount of time, I've made it in the simplest way possible.
 
 ## In case you'd like to run
-# Debian/Ubuntu
+### Debian/Ubuntu
 - `sudo apt-get update` 
 - `sudo apt-get install -y build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg python3-pip git texlive texlive-latex-extra`
 - `pip3 install manim`
