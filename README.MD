@@ -33,4 +33,4 @@ Final remark: the MacWilliams transform is a multiplication of a vector on the M
 <hr>
 That's what MacWilliams matrices look like
 
-![MacWilliams matrix of order 409 modulo 41](https://github.com/supxinfy/Diplom-slides/blob/main/41.jpg)
+![MacWilliams matrix of order 409 modulo 41](https://github.com/supxinfy/Diplom-slides/blob/main/examples/41.jpg)
