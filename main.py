@@ -2,53 +2,9 @@ from manim import *
 
 from manim_slides import Slide
 
-import numpy as np
+import macwilliams as mw
 
-import matplotlib.pyplot as plt
-import matplotlib.colors as colors
-
-import functools
-import matplotlib.colors as colors
-
-
-@functools.cache
-def MW(n, p):
-
-    if n == 0:
-        return np.array([1])
-    
-    mw = np.array(
-        [[1, 1],
-        [1, -1]]
-    )
-
-    for i in range(1, n):
-        mw = np.pad(mw, [(0, 1), (0, 1)]) + np.pad(mw, [(1, 0), (0, 1)]) + np.pad(mw, [(0, 1), (1, 0)]) - np.pad(mw, [(1, 0), (1, 0)])
-
-        mw[:, 1:-1] = mw[:, 1:-1] * (p+1)//2
-
-        mw = np.mod(mw, p)
-
-    return np.mod(mw, p)
-
-
-def hrbr(m, p):
-
-    hr = lambda x: 0.77 if 0 <= x < 0.5 else 0.414
-    br = lambda x: 5 * x + 0.5 if 0 <= x < 0.1 else -5 * x + 5.5 if 0.9 < x <= 1 else 1
-
-    return np.round(255 * colors.hsv_to_rgb((hr(m/p) * (1 - m/p), 1, br(m / p))))
-
-def MWplot(n, p):    
-    mw = MW(n, p)
-
-    hsv_mw = np.zeros((n+1, n+1, 3))
-    for i in range(n+1):
-        for j in range(n+1):
-            hsv_mw[i][j] = hrbr(mw[i][j], p)
-    return hsv_mw
-
-class RadNum(Slide):
+class Slides(Slide):
     def construct(self):
 
         slide_counter = [Text(f'{i}/18').to_corner(DR) for i in range(1, 19)]
@@ -240,7 +196,7 @@ class RadNum(Slide):
         self.play(FadeOut(pyr1, pyr2, title3, pyramid))
 
         self.play(FadeIn(slide_counter[counter]))
-        mws = [ImageMobject(MWplot(i, 17)) for i in range(2, 170)]
+        mws = [ImageMobject(mw.MWplot(i, 17)) for i in range(2, 170)]
         for i, img in enumerate(mws):
             img.height = 3+3*(1.5*i/170)
             img.set_resampling_algorithm(RESAMPLING_ALGORITHMS["box"])

@@ -1,5 +1,4 @@
 # Diplom-slides
-<hr>
 Hi there. If whatever-you-are interested what is it I'll explain.
 That's rep is a presentation of my talk on my bachelor's thesis.
 
@@ -8,8 +7,21 @@ Great appreciation to [@cowboyslick](https://github.com/cowboyslick) for a witty
 The idea is just to make the entire presentation through [manim-slides](https://github.com/jeertmans/manim-slides) and [manim](https://github.com/ManimCommunity/manim).
 Well, due to an insanely tiny amount of time, I've made it in the simplest way possible.
 
-### Content
-<hr>
+## In case you'd like to run
+
+To run, make sure that you
+<ul>
+    <li>have installed manim (if not just enter `pip install manim`)</li>
+    <li>have installed manim-slides (again, if you haven't, make `pip install manim-slides`),</li>
+</ul>
+Afterwards, just find a suitable directory for cloning, and then
+<ol>
+    <li>`git clone https://github.com/supxinfy/Diplom-slides`</li>
+    <li>`cd Diplom-slides`</li>
+    <li>`manim-slides main.py Slides`</li>
+</ol>
+
+## Content
 Topic of my talk is "Bernstein polynomials and MacWilliams transform". Presentation made in Russian.
 In case you don't know Russian, my supervisor and I have an article with the same content in English here: https://pca-pdmi.ru/2023/files/17/Gogin-Shubin-2023.pdf.
 
