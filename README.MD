@@ -8,10 +8,16 @@ The idea is just to make the entire presentation through [manim-slides](https://
 Well, due to an insanely tiny amount of time, I've made it in the simplest way possible.
 
 ## In case you'd like to run
+# Debian/Ubuntu
+- `sudo apt-get update` 
+- `sudo apt-get install -y build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg python3-pip git texlive texlive-latex-extra`
 - `pip3 install manim`
 - `pip3 install manim-slides`
 - `git clone https://github.com/supxinfy/Diplom-slides`
-- `manim-slides main.py Slides`
+- `cd Diplom-slides`
+- `mv ./tex.py ~/.local/lib/python3.9/site-packages/utils/`
+- `manim main.py Slides`
+- `manim-slides Slides`
 
 ## Content
 Topic of my talk is "Bernstein polynomials and MacWilliams transform". Presentation made in Russian.
