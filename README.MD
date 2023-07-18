@@ -15,7 +15,7 @@ Well, due to an insanely tiny amount of time, I've made it in the simplest way p
 - `pip3 install manim-slides`
 - `git clone https://github.com/supxinfy/Diplom-slides`
 - `cd Diplom-slides`
-- `mv ./tex.py ~/.local/lib/python3.9/site-packages/utils/`
+- `mv ./tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils`
 - `manim main.py Slides`
 - `manim-slides Slides`
 
