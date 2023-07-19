@@ -73,7 +73,7 @@ Tested on Debian GNU/Linux 12 (bookworm) x86_64
   - `python3 -m venv .venv`
   - `source .venv/bin/activate`
   - `python3 -m pip install manim manim-slides matplotlib`
-  - `mv utils/tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils`
+  - `mv utils/tex.py $(python3 -m pip show manim | grep Location | awk '{print $2}')/manim/utils`
 - Render:
   This may take some time... Low quality + low spec pc (1cpu 2gb RAM) = ~7m0.891s
   - `manim --quality l main.py Slides` (`-q`, `--quality [l|m|h|p|k]` - Render quality at the following resolution framerates, respectively: 854x480 15FPS, 1280x720 30FPS, 1920x1080 60FPS, 2560x1440 60FPS, 3840x2160 60FPS, added from [here](https://docs.manim.community/en/stable/guides/configuration.html)) 
