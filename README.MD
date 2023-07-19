@@ -32,5 +32,6 @@ That's what MacWilliams matrices look like
   - `python3 -m pip install manim manim-slides matplotlib`
   - `mv ./tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils`
 - Render:
-  - This may take some time... `manim --quality l main.py Slides` (`-q`, `--quality [l|m|h|p|k]` - Render quality at the follow resolution framerates, respectively: 854x480 15FPS, 1280x720 30FPS, 1920x1080 60FPS, 2560x1440 60FPS, 3840x2160 60FPS) 
+  This may take some time... Low quality + low spec pc (1cpu 2gb RAM) = ~7m0.891s
+  - `manim --quality l main.py Slides` (`-q`, `--quality [l|m|h|p|k]` - Render quality at the follow resolution framerates, respectively: 854x480 15FPS, 1280x720 30FPS, 1920x1080 60FPS, 2560x1440 60FPS, 3840x2160 60FPS) 
   - `manim-slides Slides`
