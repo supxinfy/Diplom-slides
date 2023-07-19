@@ -22,7 +22,7 @@ That's what MacWilliams matrices look like
 
 ## In case you'd like to run
 ### Debian/Ubuntu
-- `sudo apt-get update` 
+- `sudo apt-get update && sudo apt-get upgrade -y` 
 - `sudo apt-get install -y build-essential python3-dev libcairo2-dev libpango1.0-dev ffmpeg python3-pip git texlive texlive-latex-extra texlive-lang-cyrillic`
 - `pip3 install manim`
 - `pip3 install manim-slides`
