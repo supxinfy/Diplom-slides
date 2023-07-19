@@ -28,21 +28,17 @@ We're using Manim Community v0.17.3, manim-slides v4.14.0, and Python 3.11.1 (th
 ### General instructions
 To run, make sure that you
 <ul>
-    <li>have installed manim (if not, click on your system: [Linux][manim-linux], [MacOS][manim-macos], [Windows][manim-windows]) </li>
-    <li>have installed manim-slides (again, if you haven't, follow to this [guide](https://eertmans.be/manim-slides/quickstart.html)),</li>
+    <li>have installed manim (if not, click on your system: <a href="https://docs.manim.community/en/stable/installation/linux.html">Linux</a>, <a href="https://docs.manim.community/en/stable/installation/macos.html">MacOS</a>, or <a href="https://docs.manim.community/en/stable/installation/windows.html">Windows</a>) </li>
+    <li>have installed manim-slides (again, if you haven't, follow to this <a href="https://eertmans.be/manim-slides/quickstart.html">guide</a>),</li>
 </ul>
 Afterwards, just find a suitable directory for cloning, and then
 <ol>
-    <li>`git clone https://github.com/supxinfy/Diplom-slides`</li>
-    <li>`cd Diplom-slides`</li>
-    These steps wouldn't work on my version of manim without solving this [issue](#russian-issue)
-    <li>`manim main.py Slides`</li>
-    <li>`manim-slides Slides`</li>
+    <li><pre><code>git clone https://github.com/supxinfy/Diplom-slides</code></pre></li>
+    <li><pre><code>cd Diplom-slides</code></pre></li>
+    These steps wouldn't work on my version of manim without solving this <a href="#russian-issue">issue</a>
+    <li><pre><code>manim main.py Slide</code></pre></li>
+    <li><pre><code>manim-slides Slides</pre></code></li>
 </ol>
-
-[manim-linux] : https://docs.manim.community/en/stable/installation/linux.html
-[manim-macos] : https://docs.manim.community/en/stable/installation/macos.html
-[manim-windows] : https://docs.manim.community/en/stable/installation/windows.html
 
 #### Russian issue
 
@@ -51,30 +47,41 @@ To add this, you need to do these steps.
 <ol>
     <li>Install possible TeX dependencies
     <ul>
-        <li>(Debian/Linux) `sudo apt install texlive texlive-latex-extra texlive`</li>
-        <li>(Mac OS) Unless you've installed some TeX with Cyrillic support, you can do `brew install --cask mactex-no-gui` (if you haven't done it in whilst installing manim)</li>
+        <li>(Debian/Linux) <pre><code>sudo apt install texlive texlive-latex-extra texlive</pre></code></li>
+        <li>(Mac OS) Unless you've installed some TeX with Cyrillic support, you can do <pre><code>brew install --cask mactex-no-gui</pre></code> (if you haven't done it whilst installing manim)</li>
         <li>(Windows) Frankly, I have no idea. Try it yourself.</li>
     </ul>
     </li>
-    <li>Enter `[your text editor] $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils/tex.py`</li>
-    <li>Add to *default_preamble* variable a line `\usepackage{ragged2e}` (unless it exists)</li>
-    <li>Change a line `\usepackage[english]{babel}` to `\usepackage[english, main=russian]{babel}`</li>
+    <li>Enter <pre><code>[your text editor] $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils/tex.py</pre></code></li>
+    <li>Add to <i>default_preamble</i> variable a line <pre><code>\usepackage{ragged2e}</pre></code> (unless it exists)</li>
+    <li>Change a line <pre><code>\usepackage[english]{babel}</pre></code> to <pre><code>\usepackage[english, main=russian]{babel}</pre></code></li>
 </ol>
 
 The simpler way is to just replace your *tex.py* file with the edited one in the folder **utils** from the repository (which might cause an error due to different versions).
 <ol>
-    <li>mv utils/tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils/</li>
+    <li><pre><code>mv utils/tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils/</pre></code></li>
 </ol>
 
-### Ubunty/Debian
-Thanks to [@cowboyslick](https://github.com/cowboyslick) for full installation process.
-- `sudo apt-get update && sudo apt-get upgrade` 
-- `sudo apt-get install texlive texlive-latex-extra texlive`
-- `pip3 install manim`
-- `pip3 install manim-slides`
-- `git clone https://github.com/supxinfy/Diplom-slides`
-- `cd Diplom-slides`
-- `mv ./tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils` ([explanation](#russian-issue))
-- `manim main.py Slides`
-- `manim-slides Slides`
+### Debian/Ubuntu run
+Thanks to [@cowboyslick](https://github.com/cowboyslick) for full test.
 
+Tested on Debian GNU/Linux 12 (bookworm) x86_64
+- Install and setup the necessary dependencies:
+  - `sudo apt-get update && sudo apt-get upgrade -y` 
+  - `sudo apt-get install -y build-essential python3-dev python3-venv libcairo2-dev libpango1.0-dev ffmpeg python3-pip git texlive texlive-latex-extra texlive-lang-cyrillic`
+  - `git clone https://github.com/supxinfy/Diplom-slides`
+  - `cd Diplom-slides`
+  - `python3 -m venv .venv`
+  - `source .venv/bin/activate`
+  - `python3 -m pip install manim manim-slides matplotlib`
+  - `mv ./tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils`
+- Render:
+  This may take some time... Low quality + low spec pc (1cpu 2gb RAM) = ~7m0.891s
+  - `manim --quality l main.py Slides` (`-q`, `--quality [l|m|h|p|k]` - Render quality at the following resolution framerates, respectively: 854x480 15FPS, 1280x720 30FPS, 1920x1080 60FPS, 2560x1440 60FPS, 3840x2160 60FPS, added from [here](https://docs.manim.community/en/stable/guides/configuration.html)) 
+  - `manim-slides Slides`
+
+<hr>
+
+I implore you to bask in its magnificence, and should any inquiries or observations arise, I beseech you to graciously voice them forthwith. May you venture forth into the depths of this repository with a discerning eye, deriving both enlightenment and enjoyment from this scholarly pursuit.
+Gratias tibi ago!
+![MacWilliams matrix of order 169 modulo 17](https://github.com/supxinfy/Diplom-slides/blob/main/examples/17.jpeg)
