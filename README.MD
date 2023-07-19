@@ -84,4 +84,4 @@ Tested on Debian GNU/Linux 12 (bookworm) x86_64
 
 I implore you to bask in its magnificence, and should any inquiries or observations arise, I beseech you to graciously voice them forthwith. May you venture forth into the depths of this repository with a discerning eye, deriving both enlightenment and enjoyment from this scholarly pursuit.
 Gratias tibi ago!
-![MacWilliams matrix of order 169 modulo 17](https://github.com/supxinfy/Diplom-slides/blob/main/examples/17.jpeg)
+<p align="center"><img src="https://github.com/supxinfy/Diplom-slides/blob/main/examples/17.jpeg", alt="MacWilliams matrix of order 169 modulo 17" /></p>
