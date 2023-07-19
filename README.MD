@@ -46,7 +46,7 @@ To add this, you need to do these steps.
 <ol>
     <li>Install possible TeX dependencies
     <ul>
-        <li>(Debian/Linux) <pre><code>sudo apt install texlive texlive-latex-extra texlive</pre></code></li>
+        <li>(Debian/Linux) <pre><code>sudo apt install texlive texlive-latex-extra texlive-lang-cyrillic</pre></code></li>
         <li>(Mac OS) Unless you've installed some TeX with Cyrillic support, you can do <pre><code>brew install --cask mactex-no-gui</pre></code> (if you haven't done it whilst installing manim)</li>
         <li>(Windows) Frankly, I have no idea. Try it yourself.</li>
     </ul>
