@@ -21,11 +21,6 @@ That's what MacWilliams matrices look like
 ![MacWilliams matrix of order 409 modulo 41](https://github.com/supxinfy/Diplom-slides/blob/main/examples/41.jpg)
 
 ## In case you'd like to run
-<<<<<<< HEAD
-### Debian/Ubuntu
-Tested on Debian GNU/Linux 12 (bookworm) x86_64
-- Install and setup necessary depedencies:
-=======
 
 We're using Manim Community v0.17.3, manim-slides v4.14.0, and Python 3.11.1 (that depends on the interpreter you've installed manim and manim-slides).
 
@@ -71,7 +66,6 @@ Thanks to [@cowboyslick](https://github.com/cowboyslick) for full test.
 
 Tested on Debian GNU/Linux 12 (bookworm) x86_64
 - Install and setup the necessary dependencies:
->>>>>>> 1f6fd7785ace3e5487146def2991f0875554d641
   - `sudo apt-get update && sudo apt-get upgrade -y` 
   - `sudo apt-get install -y build-essential python3-dev python3-venv libcairo2-dev libpango1.0-dev ffmpeg python3-pip git texlive texlive-latex-extra texlive-lang-cyrillic`
   - `git clone https://github.com/supxinfy/Diplom-slides`
@@ -79,13 +73,9 @@ Tested on Debian GNU/Linux 12 (bookworm) x86_64
   - `python3 -m venv .venv`
   - `source .venv/bin/activate`
   - `python3 -m pip install manim manim-slides matplotlib`
-  - `mv ./tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils`
+  - `mv utils/tex.py $(pip3 show manim | grep Location | awk '{print $2}')/manim/utils`
 - Render:
   This may take some time... Low quality + low spec pc (1cpu 2gb RAM) = ~7m0.891s
-<<<<<<< HEAD
-  - `manim --quality l main.py Slides` (`-q`, `--quality [l|m|h|p|k]` - Render quality at the follow resolution framerates, respectively: 854x480 15FPS, 1280x720 30FPS, 1920x1080 60FPS, 2560x1440 60FPS, 3840x2160 60FPS) 
-  - `manim-slides Slides`
-=======
   - `manim --quality l main.py Slides` (`-q`, `--quality [l|m|h|p|k]` - Render quality at the following resolution framerates, respectively: 854x480 15FPS, 1280x720 30FPS, 1920x1080 60FPS, 2560x1440 60FPS, 3840x2160 60FPS, added from [here](https://docs.manim.community/en/stable/guides/configuration.html)) 
   - `manim-slides Slides`
 
@@ -94,7 +84,6 @@ Tested on Debian GNU/Linux 12 (bookworm) x86_64
 I implore you to bask in its magnificence, and should any inquiries or observations arise, I beseech you to graciously voice them forthwith. May you venture forth into the depths of this repository with a discerning eye, deriving both enlightenment and enjoyment from this scholarly pursuit.
 Gratias tibi ago!
 <p align="center"><img src="https://github.com/supxinfy/Diplom-slides/blob/main/examples/17.jpeg", alt="MacWilliams matrix of order 169 modulo 17" /></p>
->>>>>>> 1f6fd7785ace3e5487146def2991f0875554d641
 
 ## In case you'd like to run
 
