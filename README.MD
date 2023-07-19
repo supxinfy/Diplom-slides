@@ -25,7 +25,7 @@ That's what MacWilliams matrices look like
 Tested on Debian GNU/Linux 12 (bookworm) x86_64
 - Install and setup necessary depedencies:
   - `sudo apt-get update && sudo apt-get upgrade -y` 
-  - `sudo apt-get install -y build-essential python3-dev python3.11-venv libcairo2-dev libpango1.0-dev ffmpeg python3-pip git texlive texlive-latex-extra texlive-lang-cyrillic`
+  - `sudo apt-get install -y build-essential python3-dev python3-venv libcairo2-dev libpango1.0-dev ffmpeg python3-pip git texlive texlive-latex-extra texlive-lang-cyrillic`
   - `git clone https://github.com/supxinfy/Diplom-slides`
   - `cd Diplom-slides`
   - `python3 -m venv .venv`
